@@ -1,5 +1,5 @@
 			section		.text
-
+	
 			global		ft_strcmp
 
 ft_strcmp:
@@ -9,22 +9,18 @@ _loop:
 			mov			dl, byte [rdi + rax]
 			mov			cl, byte [rsi + rax]
 			cmp			dl, cl
-			jl			_less
-			jg			_more
-			inc			rax
-			cmp			dl, 0
-			je			_equal
-			jne			_loop
+			je			_check
+			jmp			_end
 
-_less:
+_check:
+			cmp			dl, 0
+			je			_end
+			cmp			cl, 0
+			je			_end
+			inc			rax
+			jmp			_loop
+
+_end:
 			sub			dl, cl
 			movsx		rax, dl
-			ret
-
-_more:
-			movsx		rax, dl
-			ret
-
-_equal:
-			mov			rax, 0
 			ret

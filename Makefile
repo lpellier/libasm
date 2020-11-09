@@ -7,7 +7,7 @@ SRCS = ./srcs/ft_strlen.s \
 		./srcs/ft_read.s \
 		./srcs/ft_strdup.s
 
-MAIN = ./main.c
+MAIN = ./srcs/main.c
 
 OBJS = ${SRCS:.s=.o}
 

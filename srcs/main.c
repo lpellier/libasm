@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libasm.h"
+#include "../includes/libasm.h"
 #include <errno.h>
 
 int	test_strlen(int argc, char *argv[])

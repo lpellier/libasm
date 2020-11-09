@@ -9,7 +9,7 @@ ft_write:
 			cmp			rsi, 0
 			jle			_error
 
-write:
+_write:
 			mov			rax, 1
 			syscall
 			cmp			rax, 0
